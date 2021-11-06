@@ -1,8 +1,11 @@
 import { makeStyles } from "@material-ui/core/styles";
-import Image from "../assets/images/coverImg.jpeg";
 
 const headerStyles = makeStyles(() => ({
-  navbar: { backgroundColor: "#6b84ff !important" },
+  navbar: {
+    backgroundColor: "#6b84ff !important",
+    position: "fixed !important",
+    top: 0,
+  },
   logoContainer: {
     backgroundColor: "#4752b5",
   },

@@ -10,6 +10,7 @@ const paperImgStyles = makeStyles(({ theme }) => ({
     width: "95%",
     margin: "20px auto",
     borderRadius: 10,
+    marginTop: 90,
   },
   overlay: {
     textAlign: "center",
