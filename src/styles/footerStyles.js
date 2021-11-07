@@ -4,6 +4,7 @@ const footerStyles = makeStyles(() => ({
   footerContainer: {
     backgroundColor: "#232960",
     padding: "30px 0",
+    marginTop: 50,
   },
   toolbar: {
     display: "flex",

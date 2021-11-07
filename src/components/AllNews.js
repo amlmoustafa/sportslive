@@ -1,9 +1,35 @@
-import { Container } from "@mui/material";
 import React from "react";
-import NewsCard from "./NewsCard";
+import { Button } from "@mui/material";
+import newsStyles from "../styles/newsStyles";
+import { Fragment } from "react";
+import { RoutesPaths } from "../Routing/routesPath";
+import { useHistory } from "react-router-dom";
+import AllNewsCards from "./AllNewsCards";
+import { Box } from "@mui/system";
 
 const AllNews = () => {
-  return <NewsCard />;
+  const classes = newsStyles();
+  const history = useHistory();
+
+  const navigateToAllNew = () => {
+    return history.push(RoutesPaths.AllNews);
+  };
+
+  return (
+    <Fragment>
+      <Box container className={classes.allNewsHeaderContainer}>
+        <Button
+          onClick={navigateToAllNew}
+          id="submitButton"
+          variant="contained"
+          className={classes.showAllButton}
+        >
+          Show all
+        </Button>
+      </Box>
+      <AllNewsCards />
+    </Fragment>
+  );
 };
 
 export default AllNews;

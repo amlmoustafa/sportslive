@@ -1,10 +1,10 @@
+import React, { Fragment } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { CardActionArea, Grid } from "@mui/material";
+import { Button, CardActionArea, Grid } from "@mui/material";
 import newsStyles from "../styles/newsStyles";
-import { Fragment } from "react";
 
 const AllNewsJSON = {
   status: "ok",
@@ -209,16 +209,18 @@ const AllNewsJSON = {
   ],
 };
 
-const NewsCard = () => {
+const AllNewsCards = () => {
   const classes = newsStyles();
 
   return (
     <Fragment>
-      <Typography variant="h5" className={classes.recentlyAddedTxt}>
-        Recently Added
-      </Typography>
-      <Grid className="thisisclass" container>
-        {AllNewsJSON.articles.map((article) => (
+      <Grid container className={classes.recentlyAddedTxt}>
+        <Grid item xs={12} md={6}>
+          <Typography variant="h5">Recently Added</Typography>
+        </Grid>
+      </Grid>
+      <Grid container>
+        {AllNewsJSON.articles.slice(0, 8).map((article) => (
           <Grid className={classes.newsCardGrid} item xs={6} md={3}>
             <Card className={classes.newsCard}>
               <CardActionArea>
@@ -242,8 +244,18 @@ const NewsCard = () => {
           </Grid>
         ))}
       </Grid>
+      <Grid container className={classes.centeredShowAllButton}>
+        <Button
+          onClick={() => {}}
+          id="submitButton"
+          variant="contained"
+          className={classes.showAllButton}
+        >
+          Show More
+        </Button>
+      </Grid>
     </Fragment>
   );
 };
 
-export default NewsCard;
+export default AllNewsCards;
