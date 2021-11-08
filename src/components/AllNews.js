@@ -6,6 +6,7 @@ import { RoutesPaths } from "../Routing/routesPath";
 import { useHistory } from "react-router-dom";
 import AllNewsCards from "./AllNewsCards";
 import { Box } from "@mui/system";
+import NewsCards from "./NewsCards";
 
 const AllNews = () => {
   const classes = newsStyles();
@@ -27,7 +28,7 @@ const AllNews = () => {
           Show all
         </Button>
       </Box>
-      <AllNewsCards />
+      <NewsCards />
     </Fragment>
   );
 };
