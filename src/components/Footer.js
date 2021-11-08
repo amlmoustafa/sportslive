@@ -18,7 +18,7 @@ const Footer = () => {
 
       <Grid container className={classes.footerContentContainer}>
         <Grid item xs={12} md={6}>
-          <Typography variant="caption" color="inherit">
+          <Typography variant="body2" color="inherit">
             © Copyright SportsLive 2020. All rights reserved.
           </Typography>
         </Grid>

@@ -4,7 +4,6 @@ import newsStyles from "../styles/newsStyles";
 import { Fragment } from "react";
 import { RoutesPaths } from "../Routing/routesPath";
 import { useHistory } from "react-router-dom";
-import AllNewsCards from "./AllNewsCards";
 import { Box } from "@mui/system";
 import NewsCards from "./NewsCards";
 
