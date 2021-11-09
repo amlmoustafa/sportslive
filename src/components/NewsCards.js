@@ -5,16 +5,20 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { ButtonBase, CardActionArea, Grid } from "@mui/material";
 import newsStyles from "../styles/newsStyles";
-import { allNewsJSON } from "./allNewsJSON";
 import { useHistory } from "react-router-dom";
 import { RoutesPaths } from "../Routing/routesPath";
+import moment from "moment";
 
-const NewsCards = () => {
+const NewsCards = ({ cardsList }) => {
   const classes = newsStyles();
   const history = useHistory();
 
   const handleOnClickNews = () => {
     return history.push(RoutesPaths.NewsDetails);
+  };
+
+  const formatDate = (date) => {
+    return moment(date).format("MMMM MM/YYYY HH:mm A");
   };
 
   return (
@@ -27,7 +31,7 @@ const NewsCards = () => {
         </Grid>
       </Grid>
       <Grid container>
-        {allNewsJSON.articles.slice(0, 8).map((article) => (
+        {cardsList?.map((article) => (
           <Grid className={classes.newsCardGrid} item xs={6} md={3}>
             <Card className={classes.newsCard}>
               <ButtonBase onClick={handleOnClickNews}>
@@ -44,7 +48,7 @@ const NewsCards = () => {
                       {article.title}
                     </Typography>
                     <Typography variant="caption" color="text.secondary">
-                      {article.publishedAt}
+                      {formatDate(new Date(article.publishedAt))}
                     </Typography>
                   </CardContent>
                 </CardActionArea>

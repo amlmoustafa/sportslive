@@ -22,6 +22,9 @@ const paperImgStyles = makeStyles(({ theme }) => ({
     justifyContent: "center",
     flexDirection: "column",
     borderRadius: 10,
+    // [theme.breakpoints.down("md")]: {
+    //   fontSize: 10,
+    // },
   },
 }));
 

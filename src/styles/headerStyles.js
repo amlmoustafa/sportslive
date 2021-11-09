@@ -25,6 +25,11 @@ const headerStyles = makeStyles(() => ({
     alignItems: "center",
     cursor: "pointer",
   },
+  toolbar: {
+    backgroundColor: "#6b84ff",
+    backgroundImage:
+      "-webkit-linear-gradient(-30deg, #4752b5 15%, #6b84ff 15%)",
+  },
 }));
 
 export default headerStyles;

@@ -12,7 +12,7 @@ const AllNewsCards = () => {
   const classes = newsStyles();
 
   const showMore = () => {
-    return allNewsJSON.articles.slice(4, 11).map((article) => (
+    return allNewsJSON.articles.slice(8, 15).map((article) => (
       <Grid className={classes.newsCardGrid} item xs={6} md={3}>
         <Card className={classes.newsCard}>
           <CardActionArea>
@@ -38,7 +38,7 @@ const AllNewsCards = () => {
   };
   return (
     <Fragment>
-      <NewsCards />
+      <NewsCards cardsList={allNewsJSON.articles.slice(0, 8)} />
       <Grid container className={classes.centeredShowAllButton}>
         <Button
           onClick={showMore}
