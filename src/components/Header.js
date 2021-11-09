@@ -6,7 +6,6 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
@@ -14,11 +13,15 @@ import SportsSoccerIcon from "@mui/icons-material/SportsSoccer";
 import SearchIcon from "@mui/icons-material/Search";
 import headerStyles from "../styles/headerStyles";
 import { Button } from "@material-ui/core";
+import { RoutesPaths } from "../Routing/routesPath";
+import { useHistory } from "react-router-dom";
+import SubjectIcon from '@mui/icons-material/Subject';
 
 export default function Header() {
   const classes = headerStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+  const history = useHistory();
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -121,23 +124,29 @@ export default function Header() {
             aria-label="open drawer"
             sx={{ mr: 2 }}
           >
-            <MenuIcon />
+            <SubjectIcon />
           </IconButton>
-          <SportsSoccerIcon />
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ display: { xs: "none", sm: "block" } }}
+          <div
+            className={classes.navbarLogo}
+            onClick={() => history.push(RoutesPaths.HomePage)}
           >
-            SportsLive
-          </Typography>
+            <SportsSoccerIcon />
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{ display: { xs: "none", sm: "block" } }}
+            >
+              SportsLive
+            </Typography>
+          </div>
           <Box sx={{ flexGrow: 1 }} />
           <Box>
             <Button
               className={classes.callAPIBtn}
               id="submitButton"
               variant="contained"
+              onClick={() => history.push(RoutesPaths.EmployeesList)}
             >
               Call API
             </Button>

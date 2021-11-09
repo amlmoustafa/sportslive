@@ -21,7 +21,9 @@ const NewsCards = () => {
     <Fragment>
       <Grid container className={classes.recentlyAddedTxt}>
         <Grid item xs={12} md={6}>
-          <Typography variant="h5">Recently Added</Typography>
+          <Typography variant="h5" fontWeight={"bold"}>
+            Recently Added
+          </Typography>
         </Grid>
       </Grid>
       <Grid container>

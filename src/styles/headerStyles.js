@@ -20,6 +20,11 @@ const headerStyles = makeStyles(() => ({
     fontWeight: "bold !important",
     textTransform: "capitalize !important",
   },
+  navbarLogo: {
+    display: "flex",
+    alignItems: "center",
+    cursor: "pointer",
+  },
 }));
 
 export default headerStyles;

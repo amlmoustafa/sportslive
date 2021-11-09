@@ -7,6 +7,7 @@ import AllNews from "./components/AllNews";
 import NewsDetails from "./components/NewsDetails";
 import { Box } from "@mui/system";
 import AllNewsCards from "./components/AllNewsCards";
+import EmployeesList from "./components/EmployeesList";
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
             </Route>
             <Route exact path="/newsDetails">
               <NewsDetails />
+            </Route>
+            <Route exact path="/employees">
+              <EmployeesList />
             </Route>
           </Switch>
         </Box>
