@@ -8,7 +8,7 @@ const PaperImg = () => {
   return (
     <Paper className={classes.paperContainer}>
       <div className={classes.overlay}>
-        <Typography m={4} variant="h3">
+        <Typography gutterBottom variant="h3">
           Match 23
         </Typography>
         <Typography variant="h4">T20 world cup 2020</Typography>
