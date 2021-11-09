@@ -3,7 +3,11 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { createTheme, responsiveFontSizes, ThemeProvider } from "@mui/material";
+import {
+  createTheme,
+  ThemeProvider,
+  responsiveFontSizes,
+} from "@mui/material/styles";
 
 let theme = createTheme();
 theme = responsiveFontSizes(theme);

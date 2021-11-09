@@ -1,5 +1,4 @@
-import { Paper } from "@material-ui/core";
-import { Typography } from "@mui/material";
+import { Paper, Typography } from "@mui/material";
 import paperImgStyles from "../styles/paperImgStyles";
 
 const PaperImg = () => {

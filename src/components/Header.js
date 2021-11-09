@@ -12,10 +12,10 @@ import MoreIcon from "@mui/icons-material/MoreVert";
 import SportsSoccerIcon from "@mui/icons-material/SportsSoccer";
 import SearchIcon from "@mui/icons-material/Search";
 import headerStyles from "../styles/headerStyles";
-import { Button } from "@material-ui/core";
 import { RoutesPaths } from "../Routing/routesPath";
 import { useHistory } from "react-router-dom";
-import SubjectIcon from '@mui/icons-material/Subject';
+import SubjectIcon from "@mui/icons-material/Subject";
+import { Button } from "@mui/material";
 
 export default function Header() {
   const classes = headerStyles();

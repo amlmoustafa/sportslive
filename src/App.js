@@ -8,6 +8,7 @@ import NewsDetails from "./components/NewsDetails";
 import { Box } from "@mui/system";
 import AllNewsCards from "./components/AllNewsCards";
 import EmployeesList from "./components/EmployeesList";
+import { RoutesPaths } from "./Routing/routesPath";
 
 function App() {
   return (
@@ -16,17 +17,18 @@ function App() {
         <Header />
         <Box className="content">
           <Switch>
-            <Route exact path="/">
+            <Route exact path={RoutesPaths.HomePage}
+            >
               <PaperImg />
               <AllNews />
             </Route>
-            <Route exact path="/allNews">
+            <Route exact path={RoutesPaths.AllNews}>
               <AllNewsCards />
             </Route>
-            <Route exact path="/newsDetails">
+            <Route exact path={RoutesPaths.NewsDetails}>
               <NewsDetails />
             </Route>
-            <Route exact path="/employees">
+            <Route exact path={RoutesPaths.EmployeesList}>
               <EmployeesList />
             </Route>
           </Switch>
