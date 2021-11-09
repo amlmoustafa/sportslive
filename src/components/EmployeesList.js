@@ -8,11 +8,16 @@ import Divider from "@mui/material/Divider";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import LoadingCircle from "../progress/LoadingCircle";
 
 const EmployeesList = () => {
-  const { fetchedData: employees } = useFetchData(() => {
+  const { fetchedData: employees, isLoading } = useFetchData(() => {
     return fetchEmployees();
   });
+
+  if (isLoading) {
+    return <LoadingCircle />;
+  }
 
   return (
     <Container>
