@@ -13,8 +13,8 @@ const NewsCards = ({ cardsList }) => {
   const classes = newsStyles();
   const history = useHistory();
 
-  const handleOnClickNews = () => {
-    return history.push(RoutesPaths.NewsDetails);
+  const handleOnClickNews = (articleId) => {
+    return history.push(`${RoutesPaths.NewsDetails}/${articleId}`);
   };
 
   const formatDate = (date) => {
@@ -34,7 +34,7 @@ const NewsCards = ({ cardsList }) => {
         {cardsList?.map((article) => (
           <Grid className={classes.newsCardGrid} item xs={6} md={3}>
             <Card className={classes.newsCard}>
-              <ButtonBase onClick={handleOnClickNews}>
+              <ButtonBase onClick={() => handleOnClickNews(article.id)}>
                 <CardActionArea>
                   <CardMedia
                     component="img"

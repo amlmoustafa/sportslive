@@ -1,47 +1,28 @@
-import React, { Fragment } from "react";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, Grid } from "@mui/material";
+import React, { Fragment, useState, useMemo } from "react";
+import { Button, Grid } from "@mui/material";
 import newsStyles from "../styles/newsStyles";
 import { allNewsJSON } from "./allNewsJSON";
 import NewsCards from "./NewsCards";
 
 const AllNewsCards = () => {
   const classes = newsStyles();
+  const [displayedCardCount, setDisplayedCardCount] = useState(8);
 
-  const showMore = () => {
-    return allNewsJSON.articles.slice(8, 15).map((article) => (
-      <Grid className={classes.newsCardGrid} item xs={6} md={3}>
-        <Card className={classes.newsCard}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image={article.urlToImage}
-              alt="green iguana"
-              className={classes.newsCardImg}
-            />
-            <CardContent>
-              <Typography gutterBottom variant="body2" component="div">
-                {article.title}
-              </Typography>
-              <Typography variant="caption" color="text.secondary">
-                {article.publishedAt}
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-      </Grid>
-    ));
-  };
+  const displayedArticles = useMemo(
+    () => allNewsJSON.articles.slice(0, displayedCardCount),
+    [displayedCardCount]
+  );
+
   return (
     <Fragment>
-      <NewsCards cardsList={allNewsJSON.articles.slice(0, 8)} />
+      <NewsCards cardsList={displayedArticles} />
       <Grid container className={classes.centeredShowAllButton}>
         <Button
-          onClick={showMore}
+          onClick={() => {
+            setDisplayedCardCount(
+              (prevDisplayedCardCount) => prevDisplayedCardCount + 8
+            );
+          }}
           id="submitButton"
           variant="contained"
           className={classes.showAllButton}

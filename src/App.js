@@ -17,18 +17,17 @@ function App() {
         <Header />
         <Box className="content">
           <Switch>
-            <Route exact path={RoutesPaths.HomePage}
-            >
+            <Route exact path={RoutesPaths.HomePage}>
               <PaperImg />
               <AllNews />
             </Route>
-            <Route exact path={RoutesPaths.AllNews}>
+            <Route path={RoutesPaths.AllNews}>
               <AllNewsCards />
             </Route>
-            <Route exact path={RoutesPaths.NewsDetails}>
+            <Route path={`${RoutesPaths.NewsDetails}/:id`}>
               <NewsDetails />
             </Route>
-            <Route exact path={RoutesPaths.EmployeesList}>
+            <Route path={RoutesPaths.EmployeesList}>
               <EmployeesList />
             </Route>
           </Switch>

@@ -1,9 +1,12 @@
 import { Container, Link, Typography } from "@mui/material";
+import { useParams } from "react-router-dom";
 import newsDetails from "../assets/images/newsDetailsImg.png";
 import newsDetailsSetyles from "../styles/newsDetailsSetyles";
 
 const NewsDetails = () => {
   const classes = newsDetailsSetyles();
+  let { id } = useParams();
+
   return (
     <Container>
       <img

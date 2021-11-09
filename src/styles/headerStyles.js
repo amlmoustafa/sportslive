@@ -1,10 +1,11 @@
 import { makeStyles } from "@mui/styles";
 
-const headerStyles = makeStyles(() => ({
+const headerStyles = makeStyles((theme) => ({
   navbar: {
     backgroundColor: "#6b84ff !important",
     position: "fixed !important",
     top: 0,
+    zIndex: 9,
   },
   logoContainer: {
     backgroundColor: "#4752b5",
@@ -26,9 +27,11 @@ const headerStyles = makeStyles(() => ({
     cursor: "pointer",
   },
   toolbar: {
-    backgroundColor: "#6b84ff",
     backgroundImage:
-      "-webkit-linear-gradient(-30deg, #4752b5 15%, #6b84ff 15%)",
+      "-webkit-linear-gradient(-30deg, #4752b5 20%, #6b84ff 20%)",
+    [theme.breakpoints.down("md")]: {
+      backgroundImage: "none",
+    },
   },
 }));
 
