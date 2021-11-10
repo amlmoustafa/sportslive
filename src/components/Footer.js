@@ -8,7 +8,7 @@ const Footer = () => {
 
   return (
     <AppBar position="static" className={classes.footerContainer}>
-      <Toolbar className={classes.toolbar}>
+      <Toolbar className={classes.footerToolbar}>
         <SportsSoccerIcon fontSize="large" />
         <Typography variant="h5" color="inherit">
           SportsLive

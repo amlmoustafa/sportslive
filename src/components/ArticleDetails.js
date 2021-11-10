@@ -1,4 +1,4 @@
-import { Container, Link, Typography } from "@mui/material";
+import { Container, Grid, Link, Typography } from "@mui/material";
 import newsDetails from "../assets/images/newsDetailsImg.png";
 import newsDetailsSetyles from "../assets/styles/newsDetailsSetyles";
 
@@ -16,15 +16,23 @@ const ArticleDetails = () => {
         Boxing World Cup
       </Typography>
       <Typography className={classes.detailsInfoContainer} variant="body1">
-        <Link href="#" underline="none" color="inherit" fontWeight={"bold"}>
-          {"by steven granger"}
-        </Link>
-        <Link href="#" underline="none" color="inherit" fontWeight={"bold"}>
-          {"february 18,2020"}
-        </Link>
-        <Link href="#" underline="none" color="inherit" fontWeight={"bold"}>
-          {"100 comments"}
-        </Link>
+        <Grid container>
+          <Grid item xs={12} md={4}>
+            <Link href="#" underline="none" color="inherit" fontWeight={"bold"}>
+              {"by steven granger"}
+            </Link>
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <Link href="#" underline="none" color="inherit" fontWeight={"bold"}>
+              {"february 18,2020"}
+            </Link>
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <Link href="#" underline="none" color="inherit" fontWeight={"bold"}>
+              {"100 comments"}
+            </Link>
+          </Grid>
+        </Grid>
       </Typography>
       <Typography
         variant="body1"

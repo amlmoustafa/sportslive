@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 import { ButtonBase, CardActionArea, Grid } from "@mui/material";
 import newsStyles from "../assets/styles/newsStyles";
 import { useHistory } from "react-router-dom";
-import { RoutesPaths } from "../Routing/routesPath";
+import { RoutesPaths } from "../routing/routesPath";
 import moment from "moment";
 
 const ArticleCards = ({ cardsList }) => {
@@ -32,7 +32,7 @@ const ArticleCards = ({ cardsList }) => {
       </Grid>
       <Grid container>
         {cardsList?.map((article) => (
-          <Grid className={classes.newsCardGrid} item xs={6} md={3}>
+          <Grid className={classes.newsCardGrid} item xs={12} sm={6} md={3}>
             <Card className={classes.newsCard}>
               <ButtonBase onClick={() => handleOnClickNews(article.id)}>
                 <CardActionArea>

@@ -4,10 +4,10 @@ import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ArticleDetails from "./components/ArticleDetails";
 import { Box } from "@mui/system";
-import AllNewsCards from "./components/AllNewsCards";
 import EmployeesList from "./components/EmployeesList";
-import { RoutesPaths } from "./Routing/routesPath";
+import { RoutesPaths } from "./routing/routesPath";
 import HomePage from "./components/HomePage";
+import ArticleCardsContainer from "./components/ArticleCardsContainer";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
               <HomePage />
             </Route>
             <Route path={RoutesPaths.HomePageArticles}>
-              <AllNewsCards />
+              <ArticleCardsContainer />
             </Route>
             <Route path={`${RoutesPaths.ArticleDetails}/:id`}>
               <ArticleDetails />

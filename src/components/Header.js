@@ -12,7 +12,7 @@ import MoreIcon from "@mui/icons-material/MoreVert";
 import SportsSoccerIcon from "@mui/icons-material/SportsSoccer";
 import SearchIcon from "@mui/icons-material/Search";
 import headerStyles from "../assets/styles/headerStyles";
-import { RoutesPaths } from "../Routing/routesPath";
+import { RoutesPaths } from "../routing/routesPath";
 import { useHistory } from "react-router-dom";
 import SubjectIcon from "@mui/icons-material/Subject";
 import { Button } from "@mui/material";
@@ -116,7 +116,7 @@ export default function Header() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" className={classes.navbar}>
-        <Toolbar className={classes.toolbar}>
+        <Toolbar className={classes.headerToolbar}>
           <IconButton
             size="large"
             edge="start"

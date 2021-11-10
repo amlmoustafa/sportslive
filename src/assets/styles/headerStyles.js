@@ -26,7 +26,7 @@ const headerStyles = makeStyles((theme) => ({
     alignItems: "center",
     cursor: "pointer",
   },
-  toolbar: {
+  headerToolbar: {
     backgroundImage:
       "-webkit-linear-gradient(-30deg, #4752b5 20%, #6b84ff 20%)",
     [theme.breakpoints.down("md")]: {

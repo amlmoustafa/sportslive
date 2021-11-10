@@ -11,7 +11,7 @@ const newsDetailsSetyles = makeStyles(() => ({
   detailsInfoContainer: {
     display: "flex",
     justifyContent: "space-between",
-    width: "50%",
+    width: "64%",
     textTransform: "uppercase",
     marginBottom: "40px !important",
   },

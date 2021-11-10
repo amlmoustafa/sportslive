@@ -4,7 +4,7 @@ import newsStyles from "../assets/styles/newsStyles";
 import ArticleCards from "./ArticleCards";
 import { allNewsJSON } from "../data/allNewsJSON";
 
-const AllNewsCards = () => {
+const ArticleCardsContainer = () => {
   const classes = newsStyles();
   const [displayedCardCount, setDisplayedCardCount] = useState(8);
 
@@ -34,4 +34,4 @@ const AllNewsCards = () => {
   );
 };
 
-export default AllNewsCards;
+export default ArticleCardsContainer;

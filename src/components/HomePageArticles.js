@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "@mui/material";
 import newsStyles from "../assets/styles/newsStyles";
 import { Fragment } from "react";
-import { RoutesPaths } from "../Routing/routesPath";
+import { RoutesPaths } from "../routing/routesPath";
 import { useHistory } from "react-router-dom";
 import { Box } from "@mui/system";
 import { allNewsJSON } from "../data/allNewsJSON";
