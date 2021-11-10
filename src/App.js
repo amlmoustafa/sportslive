@@ -19,7 +19,7 @@ function App() {
             <Route exact path={RoutesPaths.HomePage}>
               <HomePage />
             </Route>
-            <Route path={RoutesPaths.AllNews}>
+            <Route path={RoutesPaths.HomePageArticles}>
               <AllNewsCards />
             </Route>
             <Route path={`${RoutesPaths.ArticleDetails}/:id`}>

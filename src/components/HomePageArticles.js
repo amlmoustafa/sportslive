@@ -8,12 +8,12 @@ import { Box } from "@mui/system";
 import NewsCards from "./NewsCards";
 import { allNewsJSON } from "../data/allNewsJSON";
 
-const AllNews = () => {
+const HomePageArticles = () => {
   const classes = newsStyles();
   const history = useHistory();
 
   const navigateToAllNew = () => {
-    return history.push(RoutesPaths.AllNews);
+    return history.push(RoutesPaths.HomePageArticles);
   };
 
   return (
@@ -33,4 +33,4 @@ const AllNews = () => {
   );
 };
 
-export default AllNews;
+export default HomePageArticles;
