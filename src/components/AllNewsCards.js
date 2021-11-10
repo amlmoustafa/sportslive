@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useMemo } from "react";
 import { Button, Grid } from "@mui/material";
 import newsStyles from "../assets/styles/newsStyles";
-import NewsCards from "./NewsCards";
+import ArticleCards from "./ArticleCards";
 import { allNewsJSON } from "../data/allNewsJSON";
 
 const AllNewsCards = () => {
@@ -15,7 +15,7 @@ const AllNewsCards = () => {
 
   return (
     <Fragment>
-      <NewsCards cardsList={displayedArticles} />
+      <ArticleCards cardsList={displayedArticles} />
       <Grid container className={classes.centeredShowAllButton}>
         <Button
           onClick={() => {

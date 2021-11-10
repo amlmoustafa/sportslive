@@ -9,7 +9,7 @@ import { useHistory } from "react-router-dom";
 import { RoutesPaths } from "../Routing/routesPath";
 import moment from "moment";
 
-const NewsCards = ({ cardsList }) => {
+const ArticleCards = ({ cardsList }) => {
   const classes = newsStyles();
   const history = useHistory();
 
@@ -61,4 +61,4 @@ const NewsCards = ({ cardsList }) => {
   );
 };
 
-export default NewsCards;
+export default ArticleCards;

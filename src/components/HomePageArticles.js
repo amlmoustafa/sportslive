@@ -5,8 +5,8 @@ import { Fragment } from "react";
 import { RoutesPaths } from "../Routing/routesPath";
 import { useHistory } from "react-router-dom";
 import { Box } from "@mui/system";
-import NewsCards from "./NewsCards";
 import { allNewsJSON } from "../data/allNewsJSON";
+import ArticleCards from "./ArticleCards";
 
 const HomePageArticles = () => {
   const classes = newsStyles();
@@ -28,7 +28,7 @@ const HomePageArticles = () => {
           Show all
         </Button>
       </Box>
-      <NewsCards cardsList={allNewsJSON.articles.slice(0, 8)} />
+      <ArticleCards cardsList={allNewsJSON.articles.slice(0, 8)} />
     </Fragment>
   );
 };
