@@ -1,6 +1,6 @@
 export const RoutesPaths = {
   HomePage: "/",
   AllNews: "/allNews",
-  NewsDetails: "/newsDetails",
+  ArticleDetails: "/articleDetails",
   EmployeesList: "/employees",
 };

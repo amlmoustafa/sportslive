@@ -4,7 +4,7 @@ import PaperImg from "./components/PaperImg";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import AllNews from "./components/AllNews";
-import NewsDetails from "./components/NewsDetails";
+import ArticleDetails from "./components/ArticleDetails";
 import { Box } from "@mui/system";
 import AllNewsCards from "./components/AllNewsCards";
 import EmployeesList from "./components/EmployeesList";
@@ -24,8 +24,8 @@ function App() {
             <Route path={RoutesPaths.AllNews}>
               <AllNewsCards />
             </Route>
-            <Route path={`${RoutesPaths.NewsDetails}/:id`}>
-              <NewsDetails />
+            <Route path={`${RoutesPaths.ArticleDetails}/:id`}>
+              <ArticleDetails />
             </Route>
             <Route path={RoutesPaths.EmployeesList}>
               <EmployeesList />

@@ -2,7 +2,7 @@ import { Container, Link, Typography } from "@mui/material";
 import newsDetails from "../assets/images/newsDetailsImg.png";
 import newsDetailsSetyles from "../styles/newsDetailsSetyles";
 
-const NewsDetails = () => {
+const ArticleDetails = () => {
   const classes = newsDetailsSetyles();
 
   return (
@@ -60,4 +60,4 @@ const NewsDetails = () => {
   );
 };
 
-export default NewsDetails;
+export default ArticleDetails;

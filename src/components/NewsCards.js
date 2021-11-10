@@ -14,7 +14,7 @@ const NewsCards = ({ cardsList }) => {
   const history = useHistory();
 
   const handleOnClickNews = (articleId) => {
-    return history.push(`${RoutesPaths.NewsDetails}/${articleId}`);
+    return history.push(`${RoutesPaths.ArticleDetails}/${articleId}`);
   };
 
   const formatDate = (date) => {
