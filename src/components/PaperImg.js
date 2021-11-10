@@ -1,5 +1,5 @@
 import { Paper, Typography } from "@mui/material";
-import paperImgStyles from "../styles/paperImgStyles";
+import paperImgStyles from "../assets/styles/paperImgStyles";
 
 const PaperImg = () => {
   const classes = paperImgStyles();

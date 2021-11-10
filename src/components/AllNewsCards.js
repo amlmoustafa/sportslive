@@ -1,8 +1,8 @@
 import React, { Fragment, useState, useMemo } from "react";
 import { Button, Grid } from "@mui/material";
-import newsStyles from "../styles/newsStyles";
-import { allNewsJSON } from "./allNewsJSON";
+import newsStyles from "../assets/styles/newsStyles";
 import NewsCards from "./NewsCards";
+import { allNewsJSON } from "../data/allNewsJSON";
 
 const AllNewsCards = () => {
   const classes = newsStyles();

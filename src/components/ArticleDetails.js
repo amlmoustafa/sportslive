@@ -1,6 +1,6 @@
 import { Container, Link, Typography } from "@mui/material";
 import newsDetails from "../assets/images/newsDetailsImg.png";
-import newsDetailsSetyles from "../styles/newsDetailsSetyles";
+import newsDetailsSetyles from "../assets/styles/newsDetailsSetyles";
 
 const ArticleDetails = () => {
   const classes = newsDetailsSetyles();

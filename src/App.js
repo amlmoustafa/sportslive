@@ -1,14 +1,13 @@
 import "./App.css";
 import Header from "./components/Header";
-import PaperImg from "./components/PaperImg";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import AllNews from "./components/AllNews";
 import ArticleDetails from "./components/ArticleDetails";
 import { Box } from "@mui/system";
 import AllNewsCards from "./components/AllNewsCards";
 import EmployeesList from "./components/EmployeesList";
 import { RoutesPaths } from "./Routing/routesPath";
+import HomePage from "./components/HomePage";
 
 function App() {
   return (
@@ -18,8 +17,7 @@ function App() {
         <Box className="content">
           <Switch>
             <Route exact path={RoutesPaths.HomePage}>
-              <PaperImg />
-              <AllNews />
+              <HomePage />
             </Route>
             <Route path={RoutesPaths.AllNews}>
               <AllNewsCards />

@@ -1,12 +1,12 @@
 import React from "react";
 import { Button } from "@mui/material";
-import newsStyles from "../styles/newsStyles";
+import newsStyles from "../assets/styles/newsStyles";
 import { Fragment } from "react";
 import { RoutesPaths } from "../Routing/routesPath";
 import { useHistory } from "react-router-dom";
 import { Box } from "@mui/system";
 import NewsCards from "./NewsCards";
-import { allNewsJSON } from "./allNewsJSON";
+import { allNewsJSON } from "../data/allNewsJSON";
 
 const AllNews = () => {
   const classes = newsStyles();

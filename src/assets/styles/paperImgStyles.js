@@ -1,5 +1,5 @@
 import { makeStyles } from "@mui/styles";
-import Image from "../assets/images/coverImg.jpeg";
+import Image from "../images/coverImg.jpeg";
 
 const paperImgStyles = makeStyles(({ theme }) => ({
   paperContainer: {

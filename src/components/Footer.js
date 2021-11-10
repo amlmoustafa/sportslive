@@ -1,5 +1,5 @@
 import { AppBar, Grid, Toolbar, Typography } from "@mui/material";
-import footerStyles from "../styles/footerStyles";
+import footerStyles from "../assets/styles/footerStyles";
 import SportsSoccerIcon from "@mui/icons-material/SportsSoccer";
 import Link from "@mui/material/Link";
 

@@ -4,7 +4,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { ButtonBase, CardActionArea, Grid } from "@mui/material";
-import newsStyles from "../styles/newsStyles";
+import newsStyles from "../assets/styles/newsStyles";
 import { useHistory } from "react-router-dom";
 import { RoutesPaths } from "../Routing/routesPath";
 import moment from "moment";
